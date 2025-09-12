@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MoodJourney</string>
+    <string name="signup_underlined"><u>Sign Up Now</u></string>
+    <string name="login_underlined"><u>Login Now</u></string>
+</resources>

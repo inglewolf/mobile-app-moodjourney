@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <!--MoodJourney logo-->
+    <ImageView
+        android:id="@+id/mjtextlogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:layout_marginBottom="137dp"
+        android:contentDescription="MoodJourney Text Logo"
+        app:layout_constraintBottom_toTopOf="@+id/postTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/moodjourney" />
+
+    <!--Page title-->
+    <TextView
+        android:id="@+id/postTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:text="Sign in right here."
+        android:textColor="#669966"
+        android:textSize="42sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/usernameInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mjtextlogo" />
+
+    <!--Username input field-->
+    <EditText
+        android:id="@+id/usernameInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/entry_title_input"
+        android:ems="10"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:hint="Username"
+        android:inputType="text"
+        android:paddingLeft="15dp"
+        android:textColor="#999999"
+        android:textCursorDrawable="@drawable/custom_cursor"
+        android:textSelectHandle="@drawable/custom_text_select"
+        android:textSelectHandleRight="@drawable/custom_text_select"
+        android:textSelectHandleLeft="@drawable/custom_text_select"
+        android:textColorHighlight="#99CCCC"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/pwContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/postTitle" />
+
+    <!--Login button, goes to ListViewActivity if successful-->
+    <ImageButton
+        android:id="@+id/login2Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="128dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="Login Button"
+        android:cursorVisible="false"
+        app:layout_constraintBottom_toTopOf="@+id/registerLink"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pwContainer"
+        app:srcCompat="@drawable/login2_selector" />
+
+    <!--Guide text-->
+    <TextView
+        android:id="@+id/registerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="7dp"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:text="Don't have an account?"
+        android:textColor="#999999"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/registerLink"
+        app:layout_constraintEnd_toStartOf="@+id/registerLink"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--Link to RegisterActivity-->
+    <TextView
+        android:id="@+id/registerLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="52dp"
+        android:clickable="true"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:text="@string/signup_underlined"
+        android:textColor="#669966"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/registerText"
+        app:layout_constraintTop_toBottomOf="@+id/login2Button" />
+
+    <!--Password input field & visibility toggle-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/pwContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="67dp"
+        app:hintEnabled="false"
+        app:layout_constraintBottom_toTopOf="@+id/login2Button"
+        app:layout_constraintStart_toStartOf="@+id/usernameInput"
+        app:layout_constraintTop_toBottomOf="@+id/usernameInput"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordInput"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:background="@drawable/entry_title_input"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="0dp"
+            android:paddingLeft="15dp"
+            android:textColor="#99999999"
+            android:textCursorDrawable="@drawable/custom_cursor"
+            android:textSelectHandle="@drawable/custom_text_select"
+            android:textSelectHandleRight="@drawable/custom_text_select"
+            android:textSelectHandleLeft="@drawable/custom_text_select"
+            android:textColorHighlight="#99CCCC"
+            android:textSize="16dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

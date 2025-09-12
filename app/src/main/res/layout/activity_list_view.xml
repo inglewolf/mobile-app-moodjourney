@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#00FFFFFF"
+    tools:context=".ListViewActivity">
+
+    <!--MoodJourney logo-->
+    <ImageView
+        android:id="@+id/mjtextlogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginEnd="149dp"
+        android:layout_marginBottom="20dp"
+        android:contentDescription="MoodJourney Text Logo"
+        app:layout_constraintBottom_toTopOf="@+id/monthTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/moodjourney" />
+
+    <!--Calender button (non-functional)-->
+    <ImageButton
+        android:id="@+id/calenderBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="81dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/list"
+        app:layout_constraintEnd_toStartOf="@+id/mjtextlogo"
+        app:srcCompat="@drawable/calender_selector" />
+
+    <!--Profile button to ProfileActivity-->
+    <ImageButton
+        android:id="@+id/profileBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="81dp"
+        android:layout_marginBottom="79dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/list"
+        app:layout_constraintStart_toEndOf="@+id/mjtextlogo"
+        app:srcCompat="@drawable/profile_btn_selector" />
+
+    <!--Page descriptor-->
+    <TextView
+        android:id="@+id/entryText"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="56dp"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:text="Select a day to add, view or edit a  journal entry."
+        android:textAlignment="center"
+        android:textColor="#999999"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list" />
+
+    <!--List of entries-->
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="322dp"
+        android:layout_height="430dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="90dp"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:foregroundGravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--Name of the month-->
+    <TextView
+        android:id="@+id/monthTitle"
+        android:layout_width="85dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="125dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/aristotelica_display_bold"
+        android:text="Dec"
+        android:textAlignment="center"
+        android:textColor="#99CC99"
+        android:textSize="45sp"
+        app:layout_constraintBottom_toTopOf="@+id/list"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--Day/date-->
+    <TextView
+        android:id="@+id/dayTitle"
+        android:layout_width="67dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="137dp"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:text="2024"
+        android:textAlignment="center"
+        android:textColor="#999999"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mjtextlogo" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="mjtextlogo,calenderBtn,profileBtn,entryText,list,monthTitle,dayTitle"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--Arrow button to previous month's list (Reload ListViewActivity)-->
+    <ImageButton
+        android:id="@+id/arrowLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/calenderBtn"
+        app:layout_constraintTop_toBottomOf="@+id/calenderBtn"
+        app:srcCompat="@drawable/arrow_left_selector" />
+
+    <!--Arrow button to next month's list (Reload ListViewActivity)-->
+    <ImageButton
+        android:id="@+id/arrowRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@+id/profileBtn"
+        app:layout_constraintTop_toBottomOf="@+id/profileBtn"
+        app:srcCompat="@drawable/arrow_right_selector" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

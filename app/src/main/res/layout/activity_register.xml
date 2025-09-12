@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
+
+    <!--Link to LoginActivity-->
+    <TextView
+        android:id="@+id/loginLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:clickable="true"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:text="@string/login_underlined"
+        android:textColor="#669966"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/loginText"
+        app:layout_constraintTop_toBottomOf="@+id/signup2Button" />
+
+    <!--Guide text-->
+    <TextView
+        android:id="@+id/loginText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="4dp"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:text="Already have an account?"
+        android:textColor="#999999"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/loginLink"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signup2Button" />
+
+    <!--Page title-->
+    <TextView
+        android:id="@+id/postTitle"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="35dp"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:text="Create an account to get started."
+        android:textAlignment="center"
+        android:textColor="#669966"
+        android:textColorLink="#669966"
+        android:textSize="38sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/regUsernameInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--Sign Up button goes to LoginActivity if successful-->
+    <ImageButton
+        android:id="@+id/signup2Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@+id/ConfirmPasswordContainer"
+        app:layout_constraintTop_toBottomOf="@+id/ConfirmPasswordContainer"
+        app:srcCompat="@drawable/signup2_selector" />
+
+    <!--Password input field & visibility toggle-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        app:hintEnabled="false"
+        app:layout_constraintStart_toStartOf="@+id/birthdateView"
+        app:layout_constraintTop_toBottomOf="@+id/birthdateView"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/PasswordInput"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:background="@drawable/entry_title_input"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="0dp"
+            android:paddingLeft="15dp"
+            android:textColor="#999999"
+            android:textCursorDrawable="@drawable/custom_cursor"
+            android:textSelectHandle="@drawable/custom_text_select"
+            android:textSelectHandleRight="@drawable/custom_text_select"
+            android:textSelectHandleLeft="@drawable/custom_text_select"
+            android:textColorHighlight="#99CCCC"
+            android:textSize="16dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Email input field-->
+    <EditText
+        android:id="@+id/regEmailInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/entry_title_input"
+        android:ems="10"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="15dp"
+        android:textColor="#999999"
+        android:textCursorDrawable="@drawable/custom_cursor"
+        android:textSelectHandle="@drawable/custom_text_select"
+        android:textSelectHandleRight="@drawable/custom_text_select"
+        android:textSelectHandleLeft="@drawable/custom_text_select"
+        android:textColorHighlight="#99CCCC"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regUsernameInput" />
+
+    <!--Username input field-->
+    <EditText
+        android:id="@+id/regUsernameInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="185dp"
+        android:background="@drawable/entry_title_input"
+        android:ems="10"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:hint="Username"
+        android:inputType="text"
+        android:paddingLeft="15dp"
+        android:textColor="#999999"
+        android:textCursorDrawable="@drawable/custom_cursor"
+        android:textSelectHandle="@drawable/custom_text_select"
+        android:textSelectHandleRight="@drawable/custom_text_select"
+        android:textSelectHandleLeft="@drawable/custom_text_select"
+        android:textColorHighlight="#99CCCC"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--Password confirmation input field & visibility toggle-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ConfirmPasswordContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        app:hintEnabled="false"
+        app:layout_constraintStart_toStartOf="@+id/Password"
+        app:layout_constraintTop_toBottomOf="@+id/Password"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/regConfirmPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:background="@drawable/entry_title_input"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:padding="0dp"
+            android:paddingLeft="15dp"
+            android:textColor="#999999"
+            android:textCursorDrawable="@drawable/custom_cursor"
+            android:textSelectHandle="@drawable/custom_text_select"
+            android:textSelectHandleRight="@drawable/custom_text_select"
+            android:textSelectHandleLeft="@drawable/custom_text_select"
+            android:textColorHighlight="#99CCCC"
+            android:textSize="16dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--MoodJourney logo-->
+    <ImageView
+        android:id="@+id/mjtextlogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:contentDescription="MoodJourney Text Logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/moodjourney" />
+
+    <!--DIsplay selected birthdate-->
+    <TextView
+        android:id="@+id/birthdateView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/bdate_input_edit"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:text="Birthdate"
+        android:textColor="#999999"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/datePickerBtn"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regEmailInput" />
+
+    <!--Button to launch datePicker-->
+    <ImageButton
+        android:id="@+id/datePickerBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:background="#00FFFFFF"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/Password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/birthdateView"
+        app:srcCompat="@drawable/date_picker_selector" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

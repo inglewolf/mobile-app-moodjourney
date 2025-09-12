@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".JournalEntryActivity">
+
+    <!--Title of journal entry-->
+    <TextView
+        android:id="@+id/postTitle"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:text="Last class of the term!"
+        android:textAlignment="center"
+        android:textColor="#669966"
+        android:textColorLink="#669966"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/entryText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--Body text of journal entry-->
+    <TextView
+        android:id="@+id/entryText"
+        android:layout_width="300dp"
+        android:layout_height="320dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="-25dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="67dp"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:scrollbars="vertical"
+        android:text="Today was the last class of the term, and it felt like a mix of relief and nostalgia. We kicked things off by reviewing everything we learned, which made me realize how much we’ve covered.  The highlight was definitely the group presentations. Everyone’s projects were so creative and diverse—it was awesome to see what everyone came up with.  We also had a short reflection Today was the last class of the term, and it felt like a mix of relief and nostalgia. We kicked things off by reviewing everything we learned, which made me realize how much we’ve covered.  The highlight was definitely the group presentations. Everyone’s projects were so creative and diverse—it was awesome to see what everyone came up with.  We also had a short reflection Today was the last class of the term, and it felt like a mix of relief and nostalgia. We kicked things off by reviewing everything we learned, which made me realize how much we’ve covered.  The highlight was definitely the group presentations. Everyone’s projects were so creative and diverse—it was awesome to see what everyone came up with.  We also had a short reflection "
+        android:textAlignment="center"
+        android:textColor="#999999"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mjtextlogo" />
+
+    <!--Day/date-->
+    <TextView
+        android:id="@+id/dayTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="150dp"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:text="Day-4"
+        android:textAlignment="center"
+        android:textColor="#999999"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/monthTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/monthTitle"
+        app:layout_constraintTop_toTopOf="@+id/monthTitle"
+        app:layout_constraintVertical_bias="0.48" />
+
+    <!--Name of the month-->
+    <TextView
+        android:id="@+id/monthTitle"
+        android:layout_width="85dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="123dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="194dp"
+        android:fontFamily="@font/aristotelica_display_bold"
+        android:text="Dec"
+        android:textAlignment="viewEnd"
+        android:textColor="#99CC99"
+        android:textSize="45sp"
+        app:layout_constraintBottom_toTopOf="@+id/entryText"
+        app:layout_constraintEnd_toStartOf="@+id/dayTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--MoodJourney logo-->
+    <ImageView
+        android:id="@+id/mjtextlogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="103dp"
+        android:layout_marginBottom="278dp"
+        android:contentDescription="MoodJourney Text Logo"
+        app:layout_constraintBottom_toTopOf="@+id/entryText"
+        app:layout_constraintEnd_toStartOf="@+id/editBtn"
+        app:layout_constraintStart_toEndOf="@+id/backBtn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.454"
+        app:srcCompat="@drawable/moodjourney" />
+
+    <!--Edit button goes to Edit_Activity-->
+    <ImageButton
+        android:id="@+id/editBtn"
+        android:layout_width="30dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="67dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/dayTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mjtextlogo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/edit_btn_selector" />
+
+    <!--Back button to ListViewActivity-->
+    <ImageButton
+        android:id="@+id/backBtn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="104dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/mjtextlogo"
+        app:layout_constraintEnd_toStartOf="@+id/mjtextlogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mjtextlogo"
+        app:layout_constraintVertical_bias="0.166"
+        app:srcCompat="@drawable/back_btn_selector" />
+
+    <!--Background square for mood emoticon-->
+    <ImageView
+        android:id="@+id/moodbg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/postTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/moodbg" />
+
+    <!--"Mood"-->
+    <TextView
+        android:id="@+id/moodTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:text="Mood"
+        android:textAlignment="center"
+        android:textColor="#999999"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/moodbg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--Display selected emotion-->
+    <ImageView
+        android:id="@+id/emoticon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/moodbg"
+        app:layout_constraintEnd_toEndOf="@+id/moodbg"
+        app:layout_constraintStart_toStartOf="@+id/moodbg"
+        app:layout_constraintTop_toTopOf="@+id/moodbg"
+        app:srcCompat="@drawable/empty" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

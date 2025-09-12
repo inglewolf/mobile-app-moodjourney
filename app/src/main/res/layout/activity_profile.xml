@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <!--Header gradient block-->
+    <ImageView
+        android:id="@+id/headerBG"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_marginBottom="150dp"
+        android:src="@drawable/gradient_drawable"
+        app:layout_constraintBottom_toTopOf="@+id/dividerUpper"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--Profile pic background-->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_dp_bg"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="300dp"
+        android:src="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/logoutBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userName" />
+
+    <!--Display user's email-->
+    <TextView
+        android:id="@+id/user_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="60dp"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:text="inglewolf.mix@gmail.com"
+        android:textAlignment="center"
+        android:textColor="#999999"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/profile_bdText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dividerUpper" />
+
+    <!--"Email" label-->
+    <TextView
+        android:id="@+id/profile_emText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:text="Email"
+        android:textAlignment="center"
+        android:textColor="#999999"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/dividerUpper"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--Divider-->
+    <ImageView
+        android:id="@+id/dividerUpper"
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:layout_marginBottom="239dp"
+        android:src="@drawable/gradient_drawable"
+        app:layout_constraintBottom_toTopOf="@+id/logoutBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerBG" />
+
+    <!--Profile pic frame-->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="300dp"
+        android:src="@drawable/test_img"
+        app:layout_constraintBottom_toTopOf="@+id/logoutBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userName" />
+
+    <!--Display user's name-->
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:text="username"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="42sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--Edit button links to EditProfileActivity-->
+    <ImageButton
+        android:id="@+id/editBtn_profile"
+        android:layout_width="30dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mjtextlogo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/editbtn_profile_selector" />
+
+    <!--Back button goes back to ListViewActivity-->
+    <ImageButton
+        android:id="@+id/backBtn_profile"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="99dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/mjtextlogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/backbtn_white_selector" />
+
+    <!--MoodJourney logo-->
+    <ImageView
+        android:id="@+id/mjtextlogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginBottom="17dp"
+        android:contentDescription="MoodJourney Text Logo"
+        app:layout_constraintBottom_toTopOf="@+id/userName"
+        app:layout_constraintEnd_toStartOf="@+id/editBtn_profile"
+        app:layout_constraintStart_toEndOf="@+id/backBtn_profile"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/moodjourney_grey" />
+
+    <!--Divider-->
+    <ImageView
+        android:id="@+id/dividerLower"
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:layout_marginBottom="14dp"
+        android:src="@drawable/gradient_drawable"
+        app:layout_constraintBottom_toTopOf="@+id/user_bdate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--"Birthdate" label-->
+    <TextView
+        android:id="@+id/profile_bdText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="163dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginBottom="14dp"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:text="Birthdate"
+        android:textAlignment="center"
+        android:textColor="#999999"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/dividerLower"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--Display user's birthdate-->
+    <TextView
+        android:id="@+id/user_bdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="45dp"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:text="09-07-1996"
+        android:textAlignment="center"
+        android:textColor="#999999"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/logoutBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--Logout button goes to MainActivity-->
+    <ImageButton
+        android:id="@+id/logoutBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="#00FFFFFF"
+        android:src="@drawable/logout_selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dividerUpper" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CustomDatePickerDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!--Customize the colorControlActivated attribute -->
+        <item name="android:colorControlActivated">#669966</item>
+        <!--Header text color-->
+        <item name="android:textColorPrimaryInverse">#FFFFFFFF</item>
+        <!--Days of the month-->
+        <item name="android:textColorPrimary">#999999</item>
+        <!--days of the week-->
+        <item name="android:textColorSecondary">#669966</item>
+
+    </style>
+</resources>

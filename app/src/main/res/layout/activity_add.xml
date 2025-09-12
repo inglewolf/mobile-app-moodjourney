@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Add_Activity">
+
+    <!--For journal entry's title input field-->
+    <EditText
+        android:id="@+id/entryTitleInput"
+        android:layout_width="295dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="26dp"
+        android:background="@drawable/entry_title_input"
+        android:ems="10"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:textCursorDrawable="@drawable/custom_cursor"
+        android:textSelectHandle="@drawable/custom_text_select"
+        android:textSelectHandleRight="@drawable/custom_text_select"
+        android:textSelectHandleLeft="@drawable/custom_text_select"
+        android:textColorHighlight="#99CCCC"
+        android:hint="Title your entry"
+        android:inputType="text"
+        android:maxLength="25"
+        android:paddingLeft="15dp"
+        android:textColor="#999999"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/journalEntryInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <!--For journal entry's input field-->
+    <EditText
+        android:id="@+id/journalEntryInput"
+        android:layout_width="295dp"
+        android:layout_height="260dp"
+        android:layout_marginBottom="17dp"
+        android:background="@drawable/journal_entry_input"
+        android:textCursorDrawable="@drawable/custom_cursor"
+        android:textSelectHandle="@drawable/custom_text_select"
+        android:textSelectHandleRight="@drawable/custom_text_select"
+        android:textSelectHandleLeft="@drawable/custom_text_select"
+        android:textColorHighlight="#99CCCC"
+        android:ems="10"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:gravity="start|top"
+        android:hint="How was your day?"
+        android:inputType="textMultiLine"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="10dp"
+        android:scrollbars="vertical"
+        android:textAlignment="textStart"
+        android:textColor="#999999"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/saveBtn"
+        app:layout_constraintEnd_toEndOf="@+id/cancelBtn"
+        app:layout_constraintTop_toBottomOf="@+id/entryTitleInput" />
+
+    <!--"Mood"-->
+    <TextView
+        android:id="@+id/moodTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="443dp"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:text="Mood"
+        android:textAlignment="center"
+        android:textColor="#999999"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/saveBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mjtextlogo" />
+
+    <!--For name of the month-->
+    <TextView
+        android:id="@+id/monthTitle"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="126dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="53dp"
+        android:fontFamily="@font/aristotelica_display_bold"
+        android:text="Dec"
+        android:textAlignment="center"
+        android:textColor="#99CC99"
+        android:textSize="45sp"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintEnd_toStartOf="@+id/dayTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mjtextlogo" />
+
+    <!--For the date/day-->
+    <TextView
+        android:id="@+id/dayTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:layout_marginEnd="135dp"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:text="Day-4"
+        android:textAlignment="center"
+        android:textColor="#999999"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/monthTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/monthTitle"
+        app:layout_constraintTop_toTopOf="@+id/monthTitle" />
+
+    <!--MoodJourney logo-->
+    <ImageView
+        android:id="@+id/mjtextlogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="79dp"
+        android:contentDescription="MoodJourney Text Logo"
+        app:layout_constraintBottom_toTopOf="@+id/moodTitle"
+        app:layout_constraintStart_toStartOf="@+id/monthTitle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/moodjourney" />
+
+    <!--Set of 3 emotions to select from-->
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/moodbg_radio"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/entryTitleInput"
+        app:layout_constraintStart_toStartOf="@+id/entryTitleInput"
+        app:layout_constraintTop_toBottomOf="@+id/moodTitle">
+
+        <!--Happy emotion-->
+        <RadioButton
+            android:id="@+id/radioHappy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="45dp"
+            android:background="@drawable/happyradio_states"
+            android:button="@null"
+            android:text="1"
+            android:textColor="#00FFFFFF" />
+
+        <!--Neutral emotion-->
+        <RadioButton
+            android:id="@+id/radioNeutral"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/neutralradio_states"
+            android:button="@null"
+            android:text="2"
+            android:textColor="#00FFFFFF" />
+
+        <!--Sad emotion-->
+        <RadioButton
+            android:id="@+id/radioSad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:background="@drawable/sadradio_states"
+            android:button="@null"
+            android:text="3"
+            android:textColor="#00FFFFFF" />
+    </RadioGroup>
+
+    <!--Cancel button, goes back to ListViewActivity-->
+    <ImageButton
+        android:id="@+id/cancelBtn"
+        android:layout_width="126dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="59dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/saveBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/saveBtn"
+        app:layout_constraintTop_toBottomOf="@+id/journalEntryInput"
+        app:srcCompat="@drawable/cancel_selector" />
+
+    <!--Save button, goes to JournalEntryActivity after saving-->
+    <ImageButton
+        android:id="@+id/saveBtn"
+        android:layout_width="126dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cancelBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moodTitle"
+        app:srcCompat="@drawable/entry_save_selector" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

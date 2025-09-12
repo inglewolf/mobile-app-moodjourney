@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="0dp"
+    android:background="#00FFFFFF"
+    android:backgroundTint="#00FFFFFF"
+    android:padding="0dp">
+
+    <!--Dialog box background-->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="31dp"
+        android:alpha="0"
+        android:background="#00FFFFFF"
+        android:backgroundTint="#00FFFFFF"
+        android:padding="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dialogbg" />
+
+    <!--Negative "No" button-->
+    <Button
+        android:id="@+id/negativeButton"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="106dp"
+        android:layout_marginEnd="19dp"
+        android:backgroundTint="#00FFFFFF"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:padding="0dp"
+        android:text="No"
+        android:textColor="#669966"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/positiveButton"
+        app:layout_constraintEnd_toStartOf="@+id/positiveButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/positiveButton" />
+
+    <!--Positive "Yes" button-->
+    <Button
+        android:id="@+id/positiveButton"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="106dp"
+        android:layout_marginBottom="11dp"
+        android:backgroundTint="#00FFFFFF"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:padding="0dp"
+        android:text="Yes"
+        android:textColor="#669966"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/negativeButton"
+        app:layout_constraintTop_toBottomOf="@+id/dialogTitle" />
+
+    <!--Dialog box text-->
+    <TextView
+        android:id="@+id/dialogTitle"
+        android:layout_width="325dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="9dp"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:text="Are you sure about deleting your journal entry?"
+        android:textAlignment="center"
+        android:textColor="#999999"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/positiveButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProfileActivity">
+
+    <!--New password input field & password toggle-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/newPW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        app:hintEnabled="false"
+        app:layout_constraintBottom_toTopOf="@+id/oldPW"
+        app:layout_constraintStart_toStartOf="@+id/bdate_input"
+        app:layout_constraintTop_toBottomOf="@+id/bdate_input"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/newPWInput"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:background="@drawable/entry_title_input"
+            android:textCursorDrawable="@drawable/custom_cursor"
+            android:textSelectHandle="@drawable/custom_text_select"
+            android:textSelectHandleRight="@drawable/custom_text_select"
+            android:textSelectHandleLeft="@drawable/custom_text_select"
+            android:textColorHighlight="#99CCCC"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:hint="New Password"
+            android:inputType="textPassword"
+            android:padding="0dp"
+            android:paddingLeft="15dp"
+            android:textColor="#999999"
+            android:textSize="16dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Current password confirmation input field & password toggle-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/oldPWCnfm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:hintEnabled="false"
+        app:layout_constraintBottom_toTopOf="@+id/cancelBtnProfile"
+        app:layout_constraintEnd_toEndOf="@+id/cancelBtnProfile"
+        app:layout_constraintTop_toBottomOf="@+id/oldPW"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/oldPWCnfmInput"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:background="@drawable/entry_title_input"
+            android:textCursorDrawable="@drawable/custom_cursor"
+            android:textSelectHandle="@drawable/custom_text_select"
+            android:textSelectHandleRight="@drawable/custom_text_select"
+            android:textSelectHandleLeft="@drawable/custom_text_select"
+            android:textColorHighlight="#99CCCC"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:hint="Confirm Current Password"
+            android:inputType="textPassword"
+            android:padding="0dp"
+            android:paddingLeft="15dp"
+            android:textColor="#999999"
+            android:textSize="16dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Current password input field & password toggle-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/oldPW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        app:hintEnabled="false"
+        app:layout_constraintBottom_toTopOf="@+id/oldPWCnfm"
+        app:layout_constraintStart_toStartOf="@+id/oldPWCnfm"
+        app:layout_constraintTop_toBottomOf="@+id/newPW"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/oldPWInput"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:background="@drawable/entry_title_input"
+            android:textCursorDrawable="@drawable/custom_cursor"
+            android:textSelectHandle="@drawable/custom_text_select"
+            android:textSelectHandleRight="@drawable/custom_text_select"
+            android:textSelectHandleLeft="@drawable/custom_text_select"
+            android:textColorHighlight="#99CCCC"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:hint="Current Password"
+            android:inputType="textPassword"
+            android:padding="0dp"
+            android:paddingLeft="15dp"
+            android:textColor="#999999"
+            android:textSize="16dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Save button, goes to ProfileActivity after saving-->
+    <ImageButton
+        android:id="@+id/saveBtnProfile"
+        android:layout_width="126dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="-18dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cancelBtnProfile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editProfileTitle"
+        app:srcCompat="@drawable/entry_save_selector" />
+
+    <!--Cancel button, goes back to ProfileActivity-->
+    <ImageButton
+        android:id="@+id/cancelBtnProfile"
+        android:layout_width="126dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="58dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/saveBtnProfile"
+        app:layout_constraintTop_toBottomOf="@+id/oldPWCnfm"
+        app:srcCompat="@drawable/cancel_selector" />
+
+    <!--To display selected birthdate-->
+    <TextView
+        android:id="@+id/bdate_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/bdate_input_edit"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:text="Birthdate"
+        android:textColor="#999999"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/newPW"
+        app:layout_constraintEnd_toStartOf="@+id/datePickerBtn2"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_input" />
+
+    <!--Button to launch datePicker-->
+    <ImageButton
+        android:id="@+id/datePickerBtn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/bdate_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bdate_input"
+        app:layout_constraintTop_toTopOf="@+id/bdate_input"
+        app:srcCompat="@drawable/date_picker_selector" />
+
+    <!--Email input field-->
+    <EditText
+        android:id="@+id/email_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="19dp"
+        android:background="@drawable/entry_title_input"
+        android:textCursorDrawable="@drawable/custom_cursor"
+        android:textSelectHandle="@drawable/custom_text_select"
+        android:textSelectHandleRight="@drawable/custom_text_select"
+        android:textSelectHandleLeft="@drawable/custom_text_select"
+        android:textColorHighlight="#99CCCC"
+        android:ems="10"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:hint="Email"
+        android:inputType="text"
+        android:maxLength="25"
+        android:paddingLeft="15dp"
+        android:textColor="#999999"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/bdate_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_input" />
+
+    <!--Username input field-->
+    <EditText
+        android:id="@+id/name_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/entry_title_input"
+        android:textCursorDrawable="@drawable/custom_cursor"
+        android:textSelectHandle="@drawable/custom_text_select"
+        android:textSelectHandleRight="@drawable/custom_text_select"
+        android:textSelectHandleLeft="@drawable/custom_text_select"
+        android:textColorHighlight="#99CCCC"
+        android:ems="10"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:hint="Username"
+        android:inputType="text"
+        android:maxLength="25"
+        android:paddingLeft="15dp"
+        android:textColor="#999999"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/email_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_pic_bg" />
+
+    <!--Background for profile pic frame-->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_pic_bg"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="95dp"
+        android:layout_marginBottom="20dp"
+        android:src="#669966"
+        app:layout_constraintBottom_toTopOf="@+id/name_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--Profile pic frame-->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/edit_dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/test_img"
+        app:layout_constraintBottom_toBottomOf="@+id/user_pic_bg"
+        app:layout_constraintEnd_toEndOf="@+id/user_pic_bg"
+        app:layout_constraintStart_toStartOf="@+id/user_pic_bg"
+        app:layout_constraintTop_toTopOf="@+id/user_pic_bg" />
+
+    <!--Page/activity title-->
+    <TextView
+        android:id="@+id/editProfileTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="563dp"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:text="Edit Your Profile"
+        android:textColor="#669966"
+        android:textSize="42sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/saveBtnProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--Button to launch gallery to choose image (non-functional)-->
+    <ImageButton
+        android:id="@+id/dpSelectBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="64dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/user_pic_bg"
+        app:layout_constraintEnd_toEndOf="@+id/name_input"
+        app:srcCompat="@drawable/dpbtn_selector" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
