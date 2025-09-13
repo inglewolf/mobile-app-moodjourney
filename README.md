@@ -17,6 +17,11 @@ question mark icon and an empty title.
 All of a user’s mood & journal logs will be stored safely in their accounts and is not 
 accessible to public.
 
+## Video Demonstration
+
+[![MoodJourney Demo](https://i9.ytimg.com/vi_webp/FR8bB4mSIn8/mq1.webp?sqp=COyPk8YG-oaymwEmCMACELQB8quKqQMa8AEB-AHOBYAC0AWKAgwIABABGE0gZShVMA8=&rs=AOn4CLBxFdqSJkWtVWjdm2T8_RSr_DDpnw)](https://youtu.be/FR8bB4mSIn8)
+
+
 ## Storyboard with UI Design
 
 ![Storyboard with UI Design](documentation/Storyboard_Final.png)
