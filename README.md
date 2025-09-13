@@ -19,6 +19,7 @@ accessible to public.
 
 ## Video Demonstration
 
+Click to watch!
 [![MoodJourney Demo](https://i9.ytimg.com/vi_webp/FR8bB4mSIn8/mq1.webp?sqp=COyPk8YG-oaymwEmCMACELQB8quKqQMa8AEB-AHOBYAC0AWKAgwIABABGE0gZShVMA8=&rs=AOn4CLBxFdqSJkWtVWjdm2T8_RSr_DDpnw)](https://youtu.be/FR8bB4mSIn8)
 
 
